@@ -54,9 +54,6 @@ public class OnTapLyThuyetActivity extends AppCompatActivity {
         int lt = i-1;
         toobar.setTitle(valu.get(lt).getLoaicauhoi());
         txtnoidung.setText(valuse.get(0).getNoidungcauhoi());
-//        if(valuse.get(0).getCauliet().equals("1")){
-//            txtcaudiemliet.setText("(câu điểm liệt)");
-//        }
         if(valuse.get(0).getHinhcauhoi().isEmpty()){
             imghinhanh.setVisibility(View.GONE);
         }else {

@@ -23,37 +23,19 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BienChiDanFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class BienChiDanFragment extends Fragment {
     ListView lstbienbaochidan;
     ArrayList<bienbao> arrayListBienBaoChiDan;
     BienBaoAdapter bienBaoAdapter;
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public BienChiDanFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BienChiDanFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static BienChiDanFragment newInstance(String param1, String param2) {
         BienChiDanFragment fragment = new BienChiDanFragment();
         Bundle args = new Bundle();
@@ -78,9 +60,17 @@ public class BienChiDanFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bien_chi_dan, container, false);
         lstbienbaochidan = view.findViewById(R.id.fbc_lst_bienbaochidan);
         ArrayList<bienbao> arraybienbao1 = new ArrayList<>();
-        arraybienbao1.add(new bienbao(R.drawable.hinhshtruot,"Nội dung 1Nội dung 1Nội dung 1Nội dung 1Nội dung 1Nội dung 1"));
-        arraybienbao1.add(new bienbao(R.drawable.hinhshtruot,"Nội dung 2"));
-        arraybienbao1.add(new bienbao(R.drawable.hinhshtruot, "Nội dung 3"));
+        arraybienbao1.add(new bienbao(R.drawable.r301a,"Xe chỉ được đi thẳng"));
+        arraybienbao1.add(new bienbao(R.drawable.r301b,"Xe chỉ được rẽ phải"));
+        arraybienbao1.add(new bienbao(R.drawable.r301c,"Xe chỉ được rẽ trái"));
+        arraybienbao1.add(new bienbao(R.drawable.r301d,"Xe chỉ được rẽ phải"));
+        arraybienbao1.add(new bienbao(R.drawable.r301e,"Xe chỉ được rẽ trái"));
+        arraybienbao1.add(new bienbao(R.drawable.i405a,"Đường cụt bên phải"));
+        arraybienbao1.add(new bienbao(R.drawable.r303,"Nơi giao nhau chạy theo vòng xuyến"));
+        arraybienbao1.add(new bienbao(R.drawable.r305,"Đường dành cho người đi bộ"));
+        arraybienbao1.add(new bienbao(R.drawable.r306,"Tốc độ tối thiểu cho phép"));
+        arraybienbao1.add(new bienbao(R.drawable.r307,"Hết tốc độ tối thiểu cho phép"));
+
         bienBaoAdapter = new BienBaoAdapter(getActivity(), arraybienbao1);
         lstbienbaochidan.setAdapter(bienBaoAdapter);
         return view;

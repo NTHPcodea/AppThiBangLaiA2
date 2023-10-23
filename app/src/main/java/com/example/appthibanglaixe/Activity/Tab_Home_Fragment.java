@@ -27,39 +27,20 @@ import com.example.appthibanglaixe.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Tab_Home_Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Tab_Home_Fragment extends Fragment {
     ViewFlipper imgquangcao;
     ImageView imghoclythuyet, imgmeothi, imgbienbao, imgtracuuluat;
     private View mView;
 
     private DrawerLayout mDrawerLayout;
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public Tab_Home_Fragment() {
-        // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Tab_Home_Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Tab_Home_Fragment newInstance(String param1, String param2) {
         Tab_Home_Fragment fragment = new Tab_Home_Fragment();
         Bundle args = new Bundle();
@@ -91,7 +72,6 @@ public class Tab_Home_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_tab__home_,container,false);
         Toolbar toolbar = view.findViewById(R.id.ftt_toobar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
@@ -99,9 +79,7 @@ public class Tab_Home_Fragment extends Fragment {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this.getActivity(), mDrawerLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close);
         mDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        //////////////////////////////////////////////////////
         imgquangcao = view.findViewById(R.id.fth_img_quangcao);
-        //ActionViewFlipper();
         ActionViewFlipper();
         imghoclythuyet = view.findViewById(R.id.fth_img_hoclythuyet);
         imgmeothi = view.findViewById(R.id.fth_imgmeothi);
@@ -109,7 +87,6 @@ public class Tab_Home_Fragment extends Fragment {
         imgtracuuluat = view.findViewById(R.id.fth_imgtracuuluat);
 
 
-        //bắt xự kiện học lý thuyết
         imghoclythuyet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,7 +100,6 @@ public class Tab_Home_Fragment extends Fragment {
             }
         });
 
-        //bắt xự kiện chuyển sang trang mẹo thi
         imgmeothi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +111,6 @@ public class Tab_Home_Fragment extends Fragment {
                 startActivity(intent);
             }
         });
-        // bắt xự kiện biển báo
         imgbienbao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +122,6 @@ public class Tab_Home_Fragment extends Fragment {
                 startActivity(intent);
             }
         });
-        //bắt xự kiên tra cứu luật
         imgtracuuluat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -174,7 +148,6 @@ public class Tab_Home_Fragment extends Fragment {
             }
         });
 
-        //return inflater.inflate(R.layout.fragment_tab__uses_, container, false);
         return view;
     }
 
@@ -183,7 +156,6 @@ public class Tab_Home_Fragment extends Fragment {
 
     private void ActionViewFlipper() {
         List<String> mangquangcao = new ArrayList<>();
-        //mangquangcao.add("https://images.search.yahoo.com/search/images;_ylt=Awr9Iks6SYtiVF8A5ZNXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=h%C3%ACnh+%E1%BA%A3nh+lu%E1%BA%ADt+giao+th%C3%B4ng+%C4%91%C6%B0%E1%BB%9Dng+b%E1%BB%99&fr2=piv-web#id=79&iurl=https%3A%2F%2Ftinbanxe.vn%2Fuploads%2Fcar%2Fbien-bao-giao-thong.jpg&action=click");
         mangquangcao.add("https://vn-live-01.slatic.net/p/c2b0e613dda5f5da2f547cfd1207be5c.jpg");
         mangquangcao.add("https://hoclaixe12h.com/wp-content/uploads/2021/03/bai-thi-thuc-hanh-bang-lai-xe-may-a1.jpg");
         mangquangcao.add("https://luatsuhoanggia.vn/wp-content/uploads/2020/11/Lu%E1%BA%ADt-Giao-th%C3%B4ng-%C4%91%C6%B0%E1%BB%9Dng-b%E1%BB%99-2008.jpg");

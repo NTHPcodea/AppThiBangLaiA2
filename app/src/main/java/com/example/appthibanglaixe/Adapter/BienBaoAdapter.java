@@ -38,7 +38,6 @@ public class BienBaoAdapter extends BaseAdapter {
         return position;
     }
 
-    //có dữ liệu gán lại, đỡ cho chúng ta khi có dữ liệu load đi load lại nhiều lần
     public class ViewHolder {
         public TextView txtnoidung;
         public ImageView imgbienbao;
@@ -61,9 +60,6 @@ public class BienBaoAdapter extends BaseAdapter {
         bienbao bb = (bienbao) getItem(position);
         viewHolder.txtnoidung.setText(bb.getNoidungbienbao());
         Glide.with(context).load(bb.getHinhbienbao()).placeholder(R.drawable.icon).error(R.drawable.hinhanhlythuethome).into(viewHolder.imgbienbao);
-       // viewHolder.imgbienbao.setTag(bb.getHinhbienbao());
-//        String tenhih= bb.getHinhbienbao();
-//        viewHolder.imgbienbao.setBackgroundResource();
         return convertView;
     }
 }

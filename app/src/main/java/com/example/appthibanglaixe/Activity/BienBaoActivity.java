@@ -50,8 +50,6 @@ public class BienBaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bien_bao);
         Anhxa();
         XulitoobarBienbao();
-       // Xulijsonbienbao();
-        //Xử lí chuyển các page của màn hình biển báo
         adapter = new Fragment_BienBao_Adapter(this);
         mviewpage.setAdapter(adapter);
         lstbienbao.setAdapter(bienBaoAdapter);

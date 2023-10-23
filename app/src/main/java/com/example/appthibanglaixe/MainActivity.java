@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void XuLiToolbar() {
-        //Toolbar toolbar = findViewById(R.id.toobar);
         setSupportActionBar(toobar);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toobar, R.string.nav_drawer_open, R.string.nav_drawer_close);
@@ -78,13 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         mbottomNavigationView.getMenu().findItem(R.id.mh_menu_practice).setChecked(true);
-//                        Tab_practice_Fragment.Showhuongdanthi();
                         break;
-                        //menu tab Tôi:<item android:id="@+id/mh_menu_uses" android:title="Tôi"
-                    //        android:icon="@drawable/ic_baseline_person_24"/>
-//                    case 3:
-//                        mbottomNavigationView.getMenu().findItem(R.id.mh_menu_uses).setChecked(true);
-//                        break;
                 }
             }
 
@@ -107,9 +100,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.mh_menu_practice:
                     mViewPage.setCurrentItem(2);
                     break;
-//                case R.id.mh_menu_uses:
-//                    mViewPage.setCurrentItem(3);
-//                    break;
             }
             return true;
         }

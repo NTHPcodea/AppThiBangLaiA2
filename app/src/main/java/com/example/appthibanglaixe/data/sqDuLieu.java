@@ -38,7 +38,6 @@ public class sqDuLieu extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     SQLiteDatabase db;
     private static sqDuLieu instance = null;
-    //chạy trên nhiều luồng
     public synchronized static sqDuLieu getInstance(Context context){
         if(instance == null){
             instance = new sqDuLieu(context);
@@ -253,8 +252,6 @@ public class sqDuLieu extends SQLiteOpenHelper {
         }
     }
 
-
-
     private void readDataToDb_BoDe(SQLiteDatabase db) throws IOException, JSONException {
 
         final String MNU_BDSo = "bd";
@@ -268,7 +265,6 @@ public class sqDuLieu extends SQLiteOpenHelper {
 
                 String bode, cau, diem, ketqua;
                 JSONObject menuItemObject = menuItemsJsonArray.getJSONObject(i);
-
 
                 bode = menuItemObject.getString(MNU_BDSo);
                 cau = menuItemObject.getString(MNU_cauSo);

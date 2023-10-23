@@ -57,13 +57,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Tab_Test_Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Tab_Test_Fragment extends Fragment {
-    // khai báo
     Toolbar toobar;
     ListView lstthisathoach;
     ArrayList<bode> arrayListcauhoi;
@@ -72,35 +66,16 @@ public class Tab_Test_Fragment extends Fragment {
     int index = -1;
     Context context;
     ArrayList<cauhoi_traloi> arrayList1;
-//câu hỏi bắt đầu
-    //private int currentQuestionPosition = 0;
-
-
-    //lấy vị trí trang hiện tại
     private int mpage = 1;
-    // Khai báo toobar
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public Tab_Test_Fragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Tab_Test_Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Tab_Test_Fragment newInstance(String param1, String param2) {
         Tab_Test_Fragment fragment = new Tab_Test_Fragment();
         Bundle args = new Bundle();
@@ -122,23 +97,16 @@ public class Tab_Test_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tab__test_,container,false);
-        //Anhxa();
         toobar = view.findViewById(R.id.ftt_toobar_thisathoach);
 
         lstthisathoach = view.findViewById(R.id.ftt_resview);
-        //  toobarkiemtra = view.findViewById(R.id.ftt_toobar_kiemtra);
-        //Xulijsoncauhoibode();
         sqDuLieu data = new sqDuLieu(getActivity());
         ArrayList<bode> valuse = data.getDuLieuBoDe();
         arrayListcauhoi = valuse;
         cauhoiTraloiAdapter = new Cauhoi_traloiAdapter(getActivity(), arrayListcauhoi);
-        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false);
         lstthisathoach.setAdapter(cauhoiTraloiAdapter);
 
-        //XuliToobar();
-        // bắt xự kiện list view
 
         lstthisathoach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

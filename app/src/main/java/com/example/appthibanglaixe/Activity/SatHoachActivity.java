@@ -47,12 +47,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SatHoachActivity extends AppCompatActivity {
-    // khai báo
     private modify dbname;
     ListView lsstcauhoi;
     private Activity activity;
     int id = 0;
-    // khai báo giao diện
     TextView txtcau;
     sqDuLieu dulieu;
     ImageView imganh;

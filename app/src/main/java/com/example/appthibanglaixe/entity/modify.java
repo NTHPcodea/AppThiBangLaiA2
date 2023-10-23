@@ -28,7 +28,6 @@ public class modify {
             "\tbode TEXT,\n"+
             ")";
 
-    // phương thức lấy hết dữ liệu của bảng
     public static Cursor finAll(){
         String sql = "select * from "+TABLE_NAME;
         SQLiteDatabase sqLiteDatabase = sqDuLieu.getInstance(null).getReadableDatabase();
@@ -37,7 +36,6 @@ public class modify {
         return cursor;
     }
 
-    // phương thức thêm dữ liệu
     public static void insert(cauhoi_traloi cauhoi) {
 SQLiteDatabase sqLiteDatabase = sqDuLieu.getInstance(null).getWritableDatabase();
         ContentValues values = new ContentValues();
